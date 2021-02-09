@@ -3,7 +3,6 @@ package me.furtado.smsretriever;
 import android.content.BroadcastReceiver;
 import android.content.IntentFilter;
 import androidx.annotation.NonNull;
-import android.Manifest.permission.SEND_SMS;
 
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -58,7 +57,7 @@ final class SmsHelper {
         final IntentFilter intentFilter = new IntentFilter(SmsRetriever.SMS_RETRIEVED_ACTION);
 
         try {
-            mContext.registerReceiver(mReceiver, SmsRetriever.SEND_PERMISSION, intentFilter);
+            mContext.registerReceiver(mReceiver, intentFilter);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
