@@ -57,7 +57,7 @@ final class SmsHelper {
         final IntentFilter intentFilter = new IntentFilter(SmsRetriever.SMS_RETRIEVED_ACTION);
 
         try {
-            mContext.registerReceiver(mReceiver, intentFilter);
+            mContext.registerReceiver(mReceiver, SmsRetriever.SEND_PERMISSION, intentFilter);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
