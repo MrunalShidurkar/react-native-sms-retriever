@@ -3,6 +3,7 @@ package me.furtado.smsretriever;
 import android.content.BroadcastReceiver;
 import android.content.IntentFilter;
 import androidx.annotation.NonNull;
+import android.Manifest.permission.SEND_SMS;
 
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
